@@ -81,9 +81,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* UPDATED IMAGE: Focus on Agro-Commodities and Bio-Fuel Pellets */
-            background: linear-gradient(rgba(18, 41, 21, 0.7), rgba(18, 41, 21, 0.7)), 
-                        url('https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?q=80&w=2000&auto=format&fit=crop');
+            /* UPDATED: Background changed to the uploaded image */
+            background: linear-gradient(rgba(18, 41, 21, 0.5), rgba(18, 41, 21, 0.5)), 
+                        url('Gemini_Generated_Image_rjh3alrjh3alrjh3.jpg');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -107,6 +107,12 @@
         .stat-item h2 { font-size: 3.5rem; color: var(--accent); margin-bottom: 10px; font-weight: 800; }
         .stat-item p { text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; opacity: 0.7; }
 
+        /* --- ABOUT SECTION --- */
+        .about-section { padding: 100px 8%; max-width: 1200px; margin: 0 auto; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .feature-box { background: var(--soft-green); padding: 25px; border-radius: 8px; border-left: 4px solid var(--accent); margin-bottom: 15px; transition: 0.3s; }
+        .feature-box:hover { transform: translateX(10px); }
+
         /* --- PRODUCTS GRID --- */
         .products-section { padding: 100px 8%; background: var(--soft-green); text-align: center; }
         .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px; }
@@ -121,6 +127,8 @@
         .card-body { padding: 30px; }
         .card-body h3 { margin-bottom: 10px; color: var(--primary); }
         .spec-row { display: flex; justify-content: space-between; font-size: 0.85rem; padding: 10px 0; border-top: 1px solid #eee; color: #555; }
+        .spec-row li { list-style: none; }
+        .spec-row li:before { content: "✓ "; color: var(--accent); font-weight: bold; }
 
         /* --- CONTACT --- */
         .contact-box {
@@ -133,14 +141,15 @@
         input, select, textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; transition: 0.3s; }
         input:focus, textarea:focus { border-color: var(--accent); outline: none; }
         .submit-btn { background: var(--accent); color: white; border: none; padding: 18px; font-weight: 800; cursor: pointer; width: 100%; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; border-radius: 50px; }
-        .submit-btn:hover { background: #3d8b40; transform: translateY(-2px); }
+        .submit-btn:hover { background: #3d8b40; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 
         footer { background: var(--primary); color: white; padding: 80px 8% 40px; text-align: center; }
         .legal-links a { color: rgba(255,255,255,0.6); text-decoration: none; margin: 0 10px; font-size: 0.8rem; }
 
         @media (max-width: 992px) {
-            .contact-box { grid-template-columns: 1fr; }
+            .about-grid, .contact-box { grid-template-columns: 1fr; }
             .nav-menu { display: none; }
+            .info-side, .form-side { padding: 40px; }
         }
     </style>
 </head>
@@ -163,9 +172,9 @@
         <div data-aos="fade-up" data-aos-duration="1200">
             <h1 class="hero-title">Jivanta Global <br><span style="color:var(--accent)">Private Limited</span></h1>
             <p style="font-size: 1.4rem; margin-bottom: 35px; opacity: 0.9; max-width: 800px; margin-inline: auto;">
-                Leading the Future of Sustainable Agriculture & Bio-Fuel Energy Solutions Globally.
+                Your Trusted Partner in Premium Agricultural Commodities Trading & Sustainable Bio-Energy.
             </p>
-            <a href="#contact" class="submit-btn" style="text-decoration:none; padding: 18px 45px;">Get Bulk Quote</a>
+            <a href="#contact" class="submit-btn" style="text-decoration:none; padding: 18px 45px;">Get Custom Quote</a>
         </div>
     </section>
 
@@ -175,36 +184,51 @@
         <div class="stat-item"><h2 class="counter" data-target="500">0</h2><p>Tonnes Monthly</p></div>
     </div>
 
+    <section id="about" class="about-section">
+        <div class="about-grid">
+            <div data-aos="fade-right">
+                <h2 style="font-family:'Playfair Display'; font-size: 2.8rem; margin-bottom: 25px;">Excellence in Agricultural Trade</h2>
+                <p style="margin-bottom: 20px;">Jivanta Global Private Limited is a leading name in the agricultural commodities industry, bridging the gap between quality Indian harvests and global markets. We pride ourselves on maintaining the highest standards of quality, sustainability, and transparency.</p>
+                <p>Our comprehensive range includes premium groundnuts, oils, sustainable bio-energy, and nutrient-rich cereals serving clients across continents with reliable logistics.</p>
+            </div>
+            <div data-aos="fade-left">
+                <div class="feature-box"><h3>🌾 Quality Assurance</h3><p>Rigorous quality checks at every stage to ensure premium products.</p></div>
+                <div class="feature-box"><h3>🌍 Global Reach</h3><p>Serving 25+ countries with certified direct sourcing and reliable logistics.</p></div>
+                <div class="feature-box"><h3>♻️ Sustainability</h3><p>Committed to environmentally responsible trading and biomass energy.</p></div>
+            </div>
+        </div>
+    </section>
+
     <section id="products" class="products-section">
         <span style="color:var(--accent); font-weight:800; letter-spacing:2px; text-transform:uppercase;">Our Catalog</span>
         <h2 style="font-family:'Playfair Display'; font-size: 3rem; margin-top:10px;">Premium Commodities</h2>
         
         <div class="products-grid">
             <div class="glass-card" data-aos="fade-up">
-                <img src="https://images.unsplash.com/photo-1614960853653-80e8fd0b4da3?w=800" class="card-img" alt="Peanuts">
+                <img src="https://images.unsplash.com/photo-1614960853653-80e8fd0b4da3?w=800" class="card-img" alt="Groundnuts">
                 <div class="card-body">
                     <h3>HPS Groundnuts</h3>
-                    <p>Premium export-quality Bold & Java variety groundnuts sourced from certified Indian farms.</p>
+                    <p>Premium Bold & Java varieties sourced from certified farms, rich in protein and healthy fats.</p>
                     <div class="spec-row"><span>Moisture</span> <b>7% Max</b></div>
-                    <div class="spec-row"><span>Counts</span> <b>40/50, 50/60</b></div>
+                    <div class="spec-row"><span>Counts</span> <b>40/50, 50/60, 60/70</b></div>
                 </div>
             </div>
 
             <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800" class="card-img" alt="Oils">
+                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=800" class="card-img" alt="Edible Oils">
                 <div class="card-body">
                     <h3>Groundnut & Mustard Oil</h3>
-                    <p>Pure, cold-pressed premium edible oils processed with 100% natural filtration methods.</p>
+                    <p>Pure, cold-pressed edible oils processed with zero additives for maximum health benefits.</p>
                     <div class="spec-row"><span>Purity</span> <b>100%</b></div>
-                    <div class="spec-row"><span>Grade</span> <b>Food Grade A</b></div>
+                    <div class="spec-row"><span>Refinement</span> <b>Natural/Filtered</b></div>
                 </div>
             </div>
 
             <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800" class="card-img" alt="Feed">
+                <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800" class="card-img" alt="Animal Feed">
                 <div class="card-body">
                     <h3>Mustard & Groundnut Cake</h3>
-                    <p>High-protein de-oiled cakes, the perfect nutritional supplement for animal and fish feed.</p>
+                    <p>High-protein oil cakes ideal for cattle and poultry feed supplements.</p>
                     <div class="spec-row"><span>Protein</span> <b>35-40% Min</b></div>
                     <div class="spec-row"><span>Usage</span> <b>Animal Feed</b></div>
                 </div>
@@ -214,29 +238,29 @@
                 <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800" class="card-img" alt="Jowar">
                 <div class="card-body">
                     <h3>Yellow Jowar & Maize</h3>
-                    <p>Premium quality Sorghum and Corn, non-GMO and nutrient-dense for food processing.</p>
+                    <p>Premium Sorghum and Corn varieties for food processing and livestock feed.</p>
                     <div class="spec-row"><span>Purity</span> <b>99% Min</b></div>
-                    <div class="spec-row"><span>Origin</span> <b>Indian Soil</b></div>
+                    <div class="spec-row"><span>Grade</span> <b>Export A-Grade</b></div>
                 </div>
             </div>
 
             <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" class="card-img" alt="Tobacco">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" class="card-img" alt="Tobacco Leaves">
                 <div class="card-body">
                     <h3>Raw Tobacco Leaves</h3>
-                    <p>Sun-cured and air-dried raw tobacco leaves sourced directly from authorized Indian growers.</p>
-                    <div class="spec-row"><span>Curing</span> <b>Sun Cured</b></div>
+                    <p>Finely cured raw tobacco leaves sourced from the best plantations in India.</p>
+                    <div class="spec-row"><span>Curing</span> <b>Sun/Air Cured</b></div>
                     <div class="spec-row"><span>Color</span> <b>Natural Brown</b></div>
                 </div>
             </div>
 
             <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800" class="card-img" alt="Biomass">
+                <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800" class="card-img" alt="Biomass Pellets">
                 <div class="card-body">
                     <h3>Biomass Pellets (6mm)</h3>
-                    <p>Eco-friendly, high CV (Calorific Value) fuel pellets manufactured from sustainable groundnut shell waste.</p>
+                    <p>Eco-friendly, high CV renewable energy source manufactured from groundnut shells.</p>
                     <div class="spec-row"><span>CV</span> <b>4200+ kcal</b></div>
-                    <div class="spec-row"><span>Ash Content</span> <b>< 8%</b></div>
+                    <div class="spec-row"><span>Ash</span> <b>< 8%</b></div>
                 </div>
             </div>
         </div>
@@ -245,28 +269,34 @@
     <section id="contact" style="padding-top: 150px; background: #fff;">
         <div class="contact-box">
             <div class="info-side">
-                <h2 style="font-family:'Playfair Display'; font-size: 2.5rem; margin-bottom:25px;">Export Inquiry</h2>
-                <p style="opacity:0.8; margin-bottom:40px;">Contact our trade desk for global bulk shipments and logistics support.</p>
+                <h2 style="font-family:'Playfair Display'; font-size: 2.5rem; margin-bottom:25px;">Global Export Inquiry</h2>
+                <p style="opacity:0.8; margin-bottom:40px;">Request FOB/CIF pricing for bulk shipments. Our trade desk is available for custom specifications.</p>
                 <div style="margin: 30px 0;">
                     <p style="margin-bottom:15px;"><i class="fas fa-envelope" style="color:var(--accent); width:25px;"></i> info@jivantaglobal.com</p>
                     <p style="margin-bottom:15px;"><i class="fas fa-phone" style="color:var(--accent); width:25px;"></i> +91 7877099483</p>
                     <p><i class="fas fa-map-marker-alt" style="color:var(--accent); width:25px;"></i> Rajasthan, India</p>
+                </div>
+                <div style="margin-top:40px; font-size:0.9rem;">
+                    <p><i class="fas fa-check-circle" style="color:var(--accent);"></i> Direct Sourcing</p>
+                    <p><i class="fas fa-check-circle" style="color:var(--accent);"></i> SGS Inspection Available</p>
                 </div>
             </div>
             <div class="form-side">
                 <form action="https://formspree.io/f/xbdrloop" method="POST">
                     <input type="text" name="name" placeholder="Full Name *" required>
                     <input type="email" name="email" placeholder="Business Email *" required>
+                    <input type="tel" name="phone" placeholder="Phone Number (with Country Code)">
                     <select name="Product" required>
                         <option value="" disabled selected>Select Product of Interest *</option>
                         <option value="groundnuts">Groundnuts</option>
-                        <option value="oils">Edible Oils (Mustard/Groundnut)</option>
-                        <option value="feed">Animal Feed Cake</option>
+                        <option value="oils">Groundnut & Mustard Oil</option>
+                        <option value="cake">Mustard & Groundnut Cake</option>
                         <option value="biomass">Biomass Pellets (6mm)</option>
-                        <option value="cereals">Jowar / Maize</option>
+                        <option value="cereals">Jowar / Maize / Corn</option>
                         <option value="tobacco">Raw Tobacco Leaves</option>
+                        <option value="other">Other Commodities</option>
                     </select>
-                    <textarea name="message" rows="4" placeholder="Destination Port & Quantity..." required></textarea>
+                    <textarea name="message" rows="4" placeholder="Order Details (Port of Destination, Quantity, Grade)..." required></textarea>
                     <button type="submit" class="submit-btn">Send Trade Inquiry</button>
                 </form>
             </div>
@@ -275,52 +305,58 @@
 
     <footer>
         <div style="margin-bottom: 40px;">
-            <img src="logo.png" alt="Logo" style="height:140px; filter: brightness(0) invert(1); margin-bottom:20px;">
+            <img src="logo.jpg" alt="Logo" style="height:120px; filter: brightness(0) invert(1); margin-bottom:20px;">
             <p><b>Jivanta Global Private Limited</b></p>
             <p style="opacity:0.6; font-size:0.85rem; margin:10px 0;">Corporate Office: A-71, Karni Nagar, Bikaner, Rajasthan, 334001</p>
         </div>
         
         <div class="legal-links">
-            <a href="javascript:void(0)" onclick="alert('Trade Policy: All bulk exports subject to ICC Incoterms 2025.')">Privacy Policy</a>
-            <a href="javascript:void(0)" onclick="alert('Contact Desk: For urgent trade logistics, use the WhatsApp button.')">Terms of Trade</a>
+            <a href="javascript:void(0)" onclick="alert('Privacy Policy: Your data is only used for trade inquiries and is never shared with third parties.')">Privacy Policy</a>
+            <a href="javascript:void(0)" onclick="alert('Trade Terms: All exports subject to LC/Advance Payment as per International ICC Incoterms 2025.')">Terms of Trade</a>
         </div>
         
-        <p style="opacity:0.3; font-size:0.75rem; margin-top:50px;">&copy; 2025 Jivanta Global Private Limited. Excellence in Global Trade.</p>
+        <p style="opacity:0.3; font-size:0.75rem; margin-top:50px;">&copy; 2025 Jivanta Global Private Limited. Export Excellence Since 2024.</p>
     </footer>
 
-    <a href="https://wa.me/917877099483" class="whatsapp-btn" style="position:fixed; bottom:30px; right:30px; background:#25d366; color:white; width:65px; height:65px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:32px; z-index:9999; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+    <a href="https://wa.me/917877099483" class="whatsapp-btn" style="position:fixed; bottom:30px; right:30px; background:#25d366; color:white; width:65px; height:65px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:32px; z-index:9999; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, duration: 1000 });
+
         window.addEventListener('scroll', function() {
-            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 80);
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('scrolled', window.scrollY > 80);
         });
 
-        // Counter Logic
+        // High-Performance Counter Animation
         const counters = document.querySelectorAll('.counter');
+        const observerOptions = { threshold: 1, rootMargin: "0px" };
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const target = +entry.target.getAttribute('data-target');
                     let count = 0;
-                    const speed = target / 60;
-                    const update = () => {
+                    const speed = target / 60; 
+                    
+                    const updateCount = () => {
                         count += speed;
                         if (count < target) {
                             entry.target.innerText = Math.ceil(count) + (target === 100 ? '%' : '+');
-                            requestAnimationFrame(update);
+                            requestAnimationFrame(updateCount);
                         } else {
                             entry.target.innerText = target + (target === 100 ? '%' : '+');
                         }
                     };
-                    update();
+                    updateCount();
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 1 });
+        }, observerOptions);
+
         counters.forEach(c => observer.observe(c));
     </script>
 </body>
