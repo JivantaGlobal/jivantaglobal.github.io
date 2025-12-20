@@ -1,363 +1,333 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Jivanta Global | Premium Indian Agro-Exporter & Bio-Energy</title> 
-     
-    <meta name="description" content="Direct sourcing of premium HPS Bold Groundnuts, nutrient-rich Cereals, and sustainable Biomass Pellets. Delivering SGS-quality certified Indian commodities to 25+ countries with 100% quality assurance. Inquire for 2025 bulk trade today."> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jivanta Global | Premium Indian Agro-Exporter & Bio-Energy</title>
+    
+    <meta name="description" content="Direct sourcing of premium HPS Bold Groundnuts, nutrient-rich Cereals, and sustainable Biomass Pellets. Delivering SGS-quality certified Indian commodities to 25+ countries with 100% quality assurance. Inquire for 2025 bulk trade today.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <style> 
-        :root { 
-            --primary: #122915;  
-            --accent: #4CAF50;   
-            --soft-green: #f2f8f3; 
-            --white: #ffffff; 
-            --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); 
-        } 
+    <style>
+        :root {
+            --primary: #122915; 
+            --accent: #4CAF50;  
+            --soft-green: #f2f8f3;
+            --white: #ffffff;
+            --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; } 
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: var(--white); 
-            color: var(--primary); 
-            overflow-x: hidden; 
-            line-height: 1.6; 
-        } 
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--white);
+            color: var(--primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
 
-        /* --- NAVIGATION --- */ 
-        nav { 
-            position: fixed; 
-            top: 0; width: 100%; 
-            padding: 25px 8%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            z-index: 1000; 
-            transition: var(--transition); 
-        } 
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--transition);
+        }
 
-        nav.scrolled { 
-            padding: 12px 8%; 
-            background: rgba(255, 255, 255, 0.95); 
-            backdrop-filter: blur(20px); 
-            box-shadow: 0 15px 40px rgba(0,0,0,0.06); 
-        } 
+        nav.scrolled {
+            padding: 12px 8%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+        }
 
-        .logo-container { 
-            display: flex; 
-            align-items: center; 
-            gap: 15px; 
-            text-decoration: none; 
-        } 
+        .logo-container img {
+            height: 140px; 
+            width: auto;
+            transition: var(--transition);
+        }
 
-        .logo-container img { 
-            height: 140px;  
-            width: auto; 
-            transition: var(--transition); 
-        } 
+        nav.scrolled .logo-container img { height: 90px; }
 
-        nav.scrolled .logo-container img { height: 90px; } 
+        .nav-menu { display: flex; gap: 30px; list-style: none; }
+        .nav-menu a { 
+            text-decoration: none; color: inherit; font-weight: 700; 
+            font-size: 0.8rem; transition: 0.3s; text-transform: uppercase; 
+            letter-spacing: 1px;
+        }
+        nav:not(.scrolled) .nav-menu a { color: rgba(255,255,255,0.9); }
+        .nav-menu a:hover { color: var(--accent); }
 
-        .nav-menu { display: flex; gap: 30px; list-style: none; } 
-        .nav-menu a {  
-            text-decoration: none; color: inherit; font-weight: 700;  
-            font-size: 0.8rem; transition: 0.3s; text-transform: uppercase;  
-            letter-spacing: 1px; 
-        } 
-        nav:not(.scrolled) .nav-menu a { color: rgba(255,255,255,0.9); } 
-        .nav-menu a:hover { color: var(--accent); } 
+        /* Mobile Menu Button */
+        .menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            z-index: 1100;
+            color: white;
+        }
+        nav.scrolled .menu-btn { color: var(--primary); }
 
-        /* --- HERO --- */ 
-        .hero { 
-            height: 100vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            /* UPDATED: Background changed to the uploaded image */ 
-            background: linear-gradient(rgba(18, 41, 21, 0.5), rgba(18, 41, 21, 0.5)),  
-                        url('Gemini_Generated_Image_rjh3alrjh3alrjh3.png'); 
-            background-attachment: fixed; 
-            background-size: cover; 
-            background-position: center; 
+        /* --- HERO --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(18, 41, 21, 0.5), rgba(18, 41, 21, 0.5)), 
+                        url('Gemini_Generated_Image_rjh3alrjh3alrjh3.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.1; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+
+        /* --- STATS --- */
+        .stats-bar { 
+            padding: 80px 8%; 
+            background: var(--primary); 
             color: white; 
-            text-align: center; 
-            padding: 0 10%; 
-        } 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        .stat-item h2 { font-size: 3.5rem; color: var(--accent); margin-bottom: 10px; font-weight: 800; }
+        .stat-item p { text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; opacity: 0.7; }
 
-        .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.1; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); } 
+        /* --- ABOUT --- */
+        .about-section { padding: 100px 8%; max-width: 1200px; margin: 0 auto; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .feature-box { background: var(--soft-green); padding: 25px; border-radius: 8px; border-left: 4px solid var(--accent); margin-bottom: 15px; }
 
-        /* --- STATS --- */ 
-        .stats-bar {  
-            padding: 80px 8%;  
-            background: var(--primary);  
-            color: white;  
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            gap: 40px; 
-            text-align: center; 
-        } 
-        .stat-item h2 { font-size: 3.5rem; color: var(--accent); margin-bottom: 10px; font-weight: 800; } 
-        .stat-item p { text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; opacity: 0.7; } 
+        /* --- PRODUCTS --- */
+        .products-section { padding: 100px 8%; background: var(--soft-green); text-align: center; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px; }
+        .glass-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.05); text-align: left; }
+        .card-img { height: 250px; width: 100%; object-fit: cover; }
+        .card-body { padding: 30px; }
+        .spec-row { display: flex; justify-content: space-between; font-size: 0.85rem; padding: 10px 0; border-top: 1px solid #eee; color: #555; }
 
-        /* --- ABOUT SECTION --- */ 
-        .about-section { padding: 100px 8%; max-width: 1200px; margin: 0 auto; } 
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; } 
-        .feature-box { background: var(--soft-green); padding: 25px; border-radius: 8px; border-left: 4px solid var(--accent); margin-bottom: 15px; transition: 0.3s; } 
-        .feature-box:hover { transform: translateX(10px); } 
-
-        /* --- PRODUCTS GRID --- */ 
-        .products-section { padding: 100px 8%; background: var(--soft-green); text-align: center; } 
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px; } 
-         
-        .glass-card { 
-            background: white; border-radius: 12px; overflow: hidden; 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05); transition: var(--transition); 
-            text-align: left; border: 1px solid #f0f0f0; 
-        } 
-        .glass-card:hover { transform: translateY(-10px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); } 
-        .card-img { height: 250px; width: 100%; object-fit: cover; } 
-        .card-body { padding: 30px; } 
-        .card-body h3 { margin-bottom: 10px; color: var(--primary); } 
-        .spec-row { display: flex; justify-content: space-between; font-size: 0.85rem; padding: 10px 0; border-top: 1px solid #eee; color: #555; } 
-        .spec-row li { list-style: none; } 
-        .spec-row li:before { content: "✓ "; color: var(--accent); font-weight: bold; } 
-
-        /* --- CONTACT --- */ 
+        /* --- CONTACT --- */
         .contact-box { 
             max-width: 1100px; margin: -100px auto 100px; background: white; 
             display: grid; grid-template-columns: 1fr 1.2fr; border-radius: 20px; 
             box-shadow: 0 40px 100px rgba(0,0,0,0.1); overflow: hidden; position: relative; z-index: 10; 
-        } 
-        .info-side { background: var(--primary); color: white; padding: 60px; } 
-        .form-side { padding: 60px; } 
-        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; transition: 0.3s; } 
-        input:focus, textarea:focus { border-color: var(--accent); outline: none; } 
-        .submit-btn { background: var(--accent); color: white; border: none; padding: 18px; font-weight: 800; cursor: pointer; width: 100%; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; border-radius: 50px; } 
-        .submit-btn:hover { background: #3d8b40; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); } 
+        }
+        .info-side { background: var(--primary); color: white; padding: 60px; }
+        .form-side { padding: 60px; }
+        input, select, textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; }
+        .submit-btn { background: var(--accent); color: white; border: none; padding: 18px; font-weight: 800; cursor: pointer; width: 100%; text-transform: uppercase; border-radius: 50px; }
 
-        footer { background: var(--primary); color: white; padding: 80px 8% 40px; text-align: center; } 
-        .legal-links a { color: rgba(255,255,255,0.6); text-decoration: none; margin: 0 10px; font-size: 0.8rem; } 
+        footer { background: var(--primary); color: white; padding: 80px 8% 40px; text-align: center; }
 
-        @media (max-width: 992px) { 
-            .about-grid, .contact-box { grid-template-columns: 1fr; } 
-            .nav-menu { display: none; } 
-            .info-side, .form-side { padding: 40px; } 
-        } 
-    </style> 
-</head> 
-<body> 
+        /* --- MOBILE RESPONSIVE FIXES --- */
+        @media (max-width: 992px) {
+            nav { padding: 15px 5%; }
+            .logo-container img { height: 80px; }
+            nav.scrolled .logo-container img { height: 60px; }
 
-    <nav id="navbar"> 
-        <a href="#home" class="logo-container"> 
-            <img src="logo.png" alt="Jivanta Global Logo"> 
-        </a> 
-        <ul class="nav-menu"> 
-            <li><a href="#home">Home</a></li> 
-            <li><a href="#about">About Us</a></li> 
-            <li><a href="#products">Commodities</a></li> 
-            <li><a href="#contact">Trade Inquiry</a></li> 
-            <li><a href="https://wa.me/917877099483" style="color:var(--accent);"><i class="fab fa-whatsapp"></i> WhatsApp</a></li> 
-        </ul> 
-    </nav> 
+            .menu-btn { display: block; }
 
-    <section id="home" class="hero"> 
-        <div data-aos="fade-up" data-aos-duration="1200"> 
-            <h1 class="hero-title">Jivanta Global <br><span style="color:var(--accent)">Private Limited</span></h1> 
-            <p style="font-size: 1.4rem; margin-bottom: 35px; opacity: 0.9; max-width: 800px; margin-inline: auto;"> 
-                Your Trusted Partner in Premium Agricultural Commodities Trading & Sustainable Bio-Energy. 
-            </p> 
-            <a href="#contact" class="submit-btn" style="text-decoration:none; padding: 18px 45px;">Get Custom Quote</a> 
-        </div> 
-    </section> 
+            .nav-menu {
+                position: fixed;
+                top: 0; right: -100%;
+                width: 75%; height: 100vh;
+                background: var(--primary);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.4s ease-in-out;
+                z-index: 1050;
+                padding: 50px;
+            }
 
-    <div class="stats-bar"> 
-        <div class="stat-item"><h2 class="counter" data-target="25">0</h2><p>Destinations</p></div> 
-        <div class="stat-item"><h2 class="counter" data-target="100">0</h2><p>% Quality Assurance</p></div> 
-        <div class="stat-item"><h2 class="counter" data-target="500">0</h2><p>Tonnes Monthly</p></div> 
-    </div> 
+            .nav-menu.active { right: 0; }
+            .nav-menu a { color: white !important; font-size: 1.2rem; }
 
-    <section id="about" class="about-section"> 
-        <div class="about-grid"> 
-            <div data-aos="fade-right"> 
-                <h2 style="font-family:'Playfair Display'; font-size: 2.8rem; margin-bottom: 25px;">Excellence in Agricultural Trade</h2> 
-                <p style="margin-bottom: 20px;">Jivanta Global Private Limited is a leading name in the agricultural commodities industry, bridging the gap between quality Indian harvests and global markets. We pride ourselves on maintaining the highest standards of quality, sustainability, and transparency.</p> 
-                <p>Our comprehensive range includes premium groundnuts, oils, sustainable bio-energy, and nutrient-rich cereals serving clients across continents with reliable logistics.</p> 
-            </div> 
-            <div data-aos="fade-left"> 
-                <div class="feature-box"><h3>🌾 Quality Assurance</h3><p>Rigorous quality checks at every stage to ensure premium products.</p></div> 
-                <div class="feature-box"><h3>🌍 Global Reach</h3><p>Serving 25+ countries with certified direct sourcing and reliable logistics.</p></div> 
-                <div class="feature-box"><h3>♻️ Sustainability</h3><p>Committed to environmentally responsible trading and biomass energy.</p></div> 
-            </div> 
-        </div> 
-    </section> 
+            .hero-title { font-size: 2.8rem; }
+            .hero p { font-size: 1.1rem !important; }
 
-    <section id="products" class="products-section"> 
-        <span style="color:var(--accent); font-weight:800; letter-spacing:2px; text-transform:uppercase;">Our Catalog</span> 
-        <h2 style="font-family:'Playfair Display'; font-size: 3rem; margin-top:10px;">Premium Commodities</h2> 
-         
-        <div class="products-grid"> 
-            <div class="glass-card" data-aos="fade-up"> 
-                <img src="peanuts.png" class="card-img" alt="Groundnuts"> 
-                <div class="card-body"> 
-                    <h3>HPS Groundnuts</h3> 
-                    <p>Premium Bold & Java varieties sourced from certified farms, rich in protein and healthy fats.</p> 
-                    <div class="spec-row"><span>Moisture</span> <b>7% Max</b></div> 
-                    <div class="spec-row"><span>Counts</span> <b>40/50, 50/60, 60/70</b></div> 
-                </div> 
-            </div> 
+            .stats-bar { grid-template-columns: 1fr; padding: 50px 8%; gap: 30px; }
+            .stat-item h2 { font-size: 2.8rem; }
 
-            <div class="glass-card" data-aos="fade-up" data-aos-delay="100"> 
-                <img src="oil.png" class="card-img" alt="Edible Oils"> 
-                <div class="card-body"> 
-                    <h3>Groundnut & Mustard Oil</h3> 
-                    <p>Pure, cold-pressed edible oils processed with zero additives for maximum health benefits.</p> 
-                    <div class="spec-row"><span>Purity</span> <b>100%</b></div> 
-                    <div class="spec-row"><span>Refinement</span> <b>Natural/Filtered</b></div> 
-                </div> 
-            </div> 
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .about-section { padding: 60px 8%; }
 
-            <div class="glass-card" data-aos="fade-up" data-aos-delay="200"> 
-                <img src="cake.png" class="card-img" alt="Animal Feed"> 
-                <div class="card-body"> 
-                    <h3>Mustard & Groundnut Cake</h3> 
-                    <p>High-protein oil cakes ideal for cattle and poultry feed supplements.</p> 
-                    <div class="spec-row"><span>Protein</span> <b>35-40% Min</b></div> 
-                    <div class="spec-row"><span>Usage</span> <b>Animal Feed</b></div> 
-                </div> 
-            </div> 
+            .contact-box { grid-template-columns: 1fr; margin: -50px 5% 50px; border-radius: 15px; }
+            .info-side, .form-side { padding: 40px 20px; }
+            
+            .hero { background-attachment: scroll; } /* Fix for mobile lag */
+        }
+    </style>
+</head>
+<body>
 
-            <div class="glass-card" data-aos="fade-up"> 
-                <img src="corn.png" class="card-img" alt="Jowar"> 
-                <div class="card-body"> 
-                    <h3>Yellow Jowar & Maize</h3> 
-                    <p>Premium Sorghum and Corn varieties for food processing and livestock feed.</p> 
-                    <div class="spec-row"><span>Purity</span> <b>99% Min</b></div> 
-                    <div class="spec-row"><span>Grade</span> <b>Export A-Grade</b></div> 
-                </div> 
-            </div> 
+    <nav id="navbar">
+        <a href="#home" class="logo-container">
+            <img src="logo.png" alt="Jivanta Global Logo">
+        </a>
+        <div class="menu-btn" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Commodities</a></li>
+            <li><a href="#contact">Trade Inquiry</a></li>
+            <li><a href="https://wa.me/917877099483" style="color:var(--accent);"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        </ul>
+    </nav>
 
-            <div class="glass-card" data-aos="fade-up" data-aos-delay="100"> 
-                <img src="tobacco.png" class="card-img" alt="Tobacco Leaves"> 
-                <div class="card-body"> 
-                    <h3>Raw Tobacco Leaves</h3> 
-                    <p>Finely cured raw tobacco leaves sourced from the best plantations in India.</p> 
-                    <div class="spec-row"><span>Curing</span> <b>Sun/Air Cured</b></div> 
-                    <div class="spec-row"><span>Color</span> <b>Natural Brown</b></div> 
-                </div> 
-            </div> 
+    <section id="home" class="hero">
+        <div data-aos="fade-up" data-aos-duration="1200">
+            <h1 class="hero-title">Jivanta Global <br><span style="color:var(--accent)">Private Limited</span></h1>
+            <p style="font-size: 1.4rem; margin-bottom: 35px; opacity: 0.9; max-width: 800px; margin-inline: auto;">
+                Your Trusted Partner in Premium Agricultural Commodities Trading & Sustainable Bio-Energy.
+            </p>
+            <a href="#contact" class="submit-btn" style="text-decoration:none; padding: 18px 45px; display: inline-block; width: auto;">Get Custom Quote</a>
+        </div>
+    </section>
 
-            <div class="glass-card" data-aos="fade-up" data-aos-delay="200"> 
-                <img src="biomass.png" class="card-img" alt="Biomass Pellets"> 
-                <div class="card-body"> 
-                    <h3>Biomass Pellets (6mm)</h3> 
-                    <p>Eco-friendly, high CV renewable energy source manufactured from groundnut shells.</p> 
-                    <div class="spec-row"><span>CV</span> <b>4200+ kcal</b></div> 
-                    <div class="spec-row"><span>Ash</span> <b>< 8%</b></div> 
-                </div> 
-            </div> 
-        </div> 
-    </section> 
+    <div class="stats-bar">
+        <div class="stat-item"><h2 class="counter" data-target="25">0</h2><p>Destinations</p></div>
+        <div class="stat-item"><h2 class="counter" data-target="100">0</h2><p>% Quality Assurance</p></div>
+        <div class="stat-item"><h2 class="counter" data-target="500">0</h2><p>Tonnes Monthly</p></div>
+    </div>
 
-    <section id="contact" style="padding-top: 150px; background: #fff;"> 
-        <div class="contact-box"> 
-            <div class="info-side"> 
-                <h2 style="font-family:'Playfair Display'; font-size: 2.5rem; margin-bottom:25px;">Global Export Inquiry</h2> 
-                <p style="opacity:0.8; margin-bottom:40px;">Request FOB/CIF pricing for bulk shipments. Our trade desk is available for custom specifications.</p> 
-                <div style="margin: 30px 0;"> 
-                    <p style="margin-bottom:15px;"><i class="fas fa-envelope" style="color:var(--accent); width:25px;"></i> info@jivantaglobal.com</p> 
-                    <p style="margin-bottom:15px;"><i class="fas fa-phone" style="color:var(--accent); width:25px;"></i> +91 7877099483</p> 
-                    <p><i class="fas fa-map-marker-alt" style="color:var(--accent); width:25px;"></i> Rajasthan, India</p> 
-                </div> 
-                <div style="margin-top:40px; font-size:0.9rem;"> 
-                    <p><i class="fas fa-check-circle" style="color:var(--accent);"></i> Direct Sourcing</p> 
-                    <p><i class="fas fa-check-circle" style="color:var(--accent);"></i> SGS Inspection Available</p> 
-                </div> 
-            </div> 
-            <div class="form-side"> 
-                <form action="https://formspree.io/f/xbdrloop" method="POST"> 
-                    <input type="text" name="name" placeholder="Full Name *" required> 
-                    <input type="email" name="email" placeholder="Business Email *" required> 
-                    <input type="tel" name="phone" placeholder="Phone Number (with Country Code)"> 
-                    <select name="Product" required> 
-                        <option value="" disabled selected>Select Product of Interest *</option> 
-                        <option value="groundnuts">Groundnuts</option> 
-                        <option value="oils">Groundnut & Mustard Oil</option> 
-                        <option value="cake">Mustard & Groundnut Cake</option> 
-                        <option value="biomass">Biomass Pellets (6mm)</option> 
-                        <option value="cereals">Jowar / Maize / Corn</option> 
-                        <option value="tobacco">Raw Tobacco Leaves</option> 
-                        <option value="other">Other Commodities</option> 
-                    </select> 
-                    <textarea name="message" rows="4" placeholder="Order Details (Port of Destination, Quantity, Grade)..." required></textarea> 
-                    <button type="submit" class="submit-btn">Send Trade Inquiry</button> 
-                </form> 
-            </div> 
-        </div> 
-    </section> 
+    <section id="about" class="about-section">
+        <div class="about-grid">
+            <div data-aos="fade-right">
+                <h2 style="font-family:'Playfair Display'; font-size: 2.5rem; margin-bottom: 25px;">Excellence in Agricultural Trade</h2>
+                <p style="margin-bottom: 20px;">Jivanta Global Private Limited is a leading name in the agricultural commodities industry, bridging the gap between quality Indian harvests and global markets.</p>
+                <p>Our comprehensive range includes premium groundnuts, oils, sustainable bio-energy, and nutrient-rich cereals serving clients across continents.</p>
+            </div>
+            <div data-aos="fade-left">
+                <div class="feature-box"><h3>🌾 Quality Assurance</h3><p>Rigorous quality checks at every stage to ensure premium products.</p></div>
+                <div class="feature-box"><h3>🌍 Global Reach</h3><p>Serving 25+ countries with certified direct sourcing and reliable logistics.</p></div>
+                <div class="feature-box"><h3>♻️ Sustainability</h3><p>Committed to environmentally responsible trading and biomass energy.</p></div>
+            </div>
+        </div>
+    </section>
 
-    <footer> 
-        <div style="margin-bottom: 40px;"> 
-            <img src="logo.png" alt="Logo" style="height:120px; margin-bottom:20px;"> 
-            <p><b>Jivanta Global Private Limited</b></p> 
-            <p style="opacity:0.6; font-size:0.85rem; margin:10px 0;">Corporate Office: A-71, Karni Nagar, Bikaner, Rajasthan, 334001</p> 
-        </div> 
-         
-        <div class="legal-links"> 
-            <a href="javascript:void(0)" onclick="alert('Privacy Policy: Your data is only used for trade inquiries and is never shared with third parties.')">Privacy Policy</a> 
-            <a href="javascript:void(0)" onclick="alert('Trade Terms: All exports subject to LC/Advance Payment as per International ICC Incoterms 2025.')">Terms of Trade</a> 
-        </div> 
-         
-        <p style="opacity:0.3; font-size:0.75rem; margin-top:50px;">&copy; 2025 Jivanta Global Private Limited. Export Excellence Since 2024.</p> 
-    </footer> 
+    <section id="products" class="products-section">
+        <span style="color:var(--accent); font-weight:800; letter-spacing:2px; text-transform:uppercase;">Our Catalog</span>
+        <h2 style="font-family:'Playfair Display'; font-size: 2.5rem; margin-top:10px;">Premium Commodities</h2>
+        
+        <div class="products-grid">
+            <div class="glass-card" data-aos="fade-up">
+                <img src="peanuts.png" class="card-img" alt="Groundnuts">
+                <div class="card-body">
+                    <h3>HPS Groundnuts</h3>
+                    <p>Premium Bold & Java varieties sourced from certified farms.</p>
+                    <div class="spec-row"><span>Moisture</span> <b>7% Max</b></div>
+                    <div class="spec-row"><span>Counts</span> <b>40/50, 50/60, 60/70</b></div>
+                </div>
+            </div>
+            </div>
+    </section>
 
-    <a href="https://wa.me/917877099483" class="whatsapp-btn" style="position:fixed; bottom:30px; right:30px; background:#25d366; color:white; width:65px; height:65px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:32px; z-index:9999; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"> 
-        <i class="fab fa-whatsapp"></i> 
-    </a> 
+    <section id="contact" style="padding-top: 150px; background: #fff;">
+        <div class="contact-box">
+            <div class="info-side">
+                <h2 style="font-family:'Playfair Display'; font-size: 2rem; margin-bottom:20px;">Global Export Inquiry</h2>
+                <div style="margin: 25px 0;">
+                    <p style="margin-bottom:12px;"><i class="fas fa-envelope" style="color:var(--accent); width:25px;"></i> info@jivantaglobal.com</p>
+                    <p style="margin-bottom:12px;"><i class="fas fa-phone" style="color:var(--accent); width:25px;"></i> +91 7877099483</p>
+                    <p><i class="fas fa-map-marker-alt" style="color:var(--accent); width:25px;"></i> Rajasthan, India</p>
+                </div>
+            </div>
+            <div class="form-side">
+                <form action="https://formspree.io/f/xbdrloop" method="POST">
+                    <input type="text" name="name" placeholder="Full Name *" required>
+                    <input type="email" name="email" placeholder="Business Email *" required>
+                    <select name="Product" required>
+                        <option value="" disabled selected>Select Product *</option>
+                        <option value="groundnuts">Groundnuts</option>
+                        <option value="biomass">Biomass Pellets</option>
+                        <option value="other">Other Commodities</option>
+                    </select>
+                    <textarea name="message" rows="4" placeholder="Order Details..." required></textarea>
+                    <button type="submit" class="submit-btn">Send Trade Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
-    <script> 
-        AOS.init({ once: true, duration: 1000 }); 
+    <footer>
+        <img src="logo.png" alt="Logo" style="height:100px; margin-bottom:20px;">
+        <p><b>Jivanta Global Private Limited</b></p>
+        <p style="opacity:0.6; font-size:0.8rem;">&copy; 2025 Jivanta Global Private Limited.</p>
+    </footer>
 
-        window.addEventListener('scroll', function() { 
-            const nav = document.getElementById('navbar'); 
-            nav.classList.toggle('scrolled', window.scrollY > 80); 
-        }); 
+    <a href="https://wa.me/917877099483" class="whatsapp-btn" style="position:fixed; bottom:25px; right:25px; background:#25d366; color:white; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:30px; z-index:9999; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-        // High-Performance Counter Animation 
-        const counters = document.querySelectorAll('.counter'); 
-        const observerOptions = { threshold: 1, rootMargin: "0px" }; 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 1000 });
 
-        const observer = new IntersectionObserver((entries) => { 
-            entries.forEach(entry => { 
-                if (entry.isIntersecting) { 
-                    const target = +entry.target.getAttribute('data-target'); 
-                    let count = 0; 
-                    const speed = target / 60;  
-                     
-                    const updateCount = () => { 
-                        count += speed; 
-                        if (count < target) { 
-                            entry.target.innerText = Math.ceil(count) + (target === 100 ? '%' : '+'); 
-                            requestAnimationFrame(updateCount); 
-                        } else { 
-                            entry.target.innerText = target + (target === 100 ? '%' : '+'); 
-                        } 
-                    }; 
-                    updateCount(); 
-                    observer.unobserve(entry.target); 
-                } 
-            }); 
-        }, observerOptions); 
+        // Mobile Menu Script
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
 
-        counters.forEach(c => observer.observe(c)); 
-    </script> 
-</body> 
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('scrolled', window.scrollY > 80);
+        });
+
+        // Counter Logic
+        const counters = document.querySelectorAll('.counter');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = +entry.target.getAttribute('data-target');
+                    let count = 0;
+                    const updateCount = () => {
+                        count += target / 60;
+                        if (count < target) {
+                            entry.target.innerText = Math.ceil(count) + (target === 100 ? '%' : '+');
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            entry.target.innerText = target + (target === 100 ? '%' : '+');
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 1 });
+
+        counters.forEach(c => observer.observe(c));
+    </script>
+</body>
 </html>
